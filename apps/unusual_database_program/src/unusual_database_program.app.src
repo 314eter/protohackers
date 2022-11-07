@@ -1,0 +1,15 @@
+{application, unusual_database_program, [
+    {description, "Protohackers Problem 4: Unusual Database Program"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {unusual_database_program_app, []}},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, [{port, 9704}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

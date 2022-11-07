@@ -1,0 +1,16 @@
+{application, speed_daemon, [
+    {description, "Protohackers Problem 6: Speed Daemon"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {speed_daemon_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch
+    ]},
+    {env, [{port, 9706}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

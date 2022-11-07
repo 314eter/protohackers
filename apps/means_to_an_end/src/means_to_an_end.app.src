@@ -1,0 +1,16 @@
+{application, means_to_an_end, [
+    {description, "Protohackers Problem 2: Means to an End"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {means_to_an_end_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch
+    ]},
+    {env, [{port, 9702}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

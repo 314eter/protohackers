@@ -1,0 +1,17 @@
+{application, prime_time, [
+    {description, "Protohackers Problem 1: Prime Time"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {prime_time_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch,
+        jiffy
+    ]},
+    {env, [{port, 9701}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.

@@ -1,0 +1,20 @@
+{application, mob_in_the_middle, [
+    {description, "Protohackers Problem 5: Mob in the Middle"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {mob_in_the_middle_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch
+    ]},
+    {env, [
+        {port, 9705},
+        {upstream_address, "chat.protohackers.com"},
+        {upstream_port, 16963}
+    ]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
