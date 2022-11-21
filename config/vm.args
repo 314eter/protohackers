@@ -2,5 +2,4 @@
 
 -setcookie protohackers_cookie
 
-+K true
-+A30
+-enable-feature maybe_expr
