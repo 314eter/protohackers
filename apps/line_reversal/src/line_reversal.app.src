@@ -1,0 +1,19 @@
+{application, line_reversal, [
+    {description, "Protohackers Problem 7: Line Reversal"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {line_reversal_app, []}},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, [
+        {port, 9707},
+        {retransmission_timeout, 500},
+        {session_expiry_timeout, 60000}
+    ]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
