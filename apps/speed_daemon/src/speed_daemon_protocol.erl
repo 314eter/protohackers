@@ -27,7 +27,8 @@
         {keep_state, Data#{buffer := Buffer}};
     ?FUNCTION_NAME(internal, <<16#40, Interval:4/unit:8, Rest/binary>>, _Data) ->
         Timeout = case Interval of 0 -> infinity; _ -> 100 * Interval end,
-        {keep_state_and_data, [{{timeout, heartbeat}, Timeout, Timeout}, {next_event, internal, Rest}]};
+        Actions = [{{timeout, heartbeat}, Timeout, Timeout}, {next_event, internal, Rest}],
+        {keep_state_and_data, Actions};
     ?FUNCTION_NAME(internal, _, #{transport := Transport, socket := Socket}) ->
         Transport:send(Socket, <<16#10, 12, "invalid data">>),
         Transport:close(Socket),

@@ -133,9 +133,8 @@ check_speed(
     ),
     Speed = 3600 * abs(Mile2 - Mile1) / abs(Timestamp2 - Timestamp1),
     TicketDays = timespan_to_days(Timestamp1, Timestamp2),
-    Overlapping = lists:any(fun(Day) -> sets:is_element({Plate, Day}, Days) end, TicketDays),
-    if
-        Speed > Limit, not Overlapping ->
+    case lists:any(fun(Day) -> sets:is_element({Plate, Day}, Days) end, TicketDays) of
+        false when Speed > Limit ->
             #{
                 plate => Plate,
                 road => Road,
@@ -145,7 +144,7 @@ check_speed(
                 timestamp2 => Timestamp2,
                 speed => Speed
             };
-        true ->
+        _ ->
             check_speed(Plate, Road, Mile, Timestamp, CheckReports, Limit, Days)
     end.
 
