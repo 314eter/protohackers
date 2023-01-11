@@ -1,0 +1,17 @@
+{application, job_centre, [
+    {description, "Protohackers Problem 9: Job Centre"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {job_centre_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch,
+        jiffy
+    ]},
+    {env, [{port, 9709}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
