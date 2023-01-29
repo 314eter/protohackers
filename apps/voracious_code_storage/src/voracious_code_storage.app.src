@@ -1,0 +1,16 @@
+{application, voracious_code_storage, [
+    {description, "Protohackers Problem 10: Voracious Code Storage"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {voracious_code_storage_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        ranch
+    ]},
+    {env, [{port, 9710}]},
+    {modules, []},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
